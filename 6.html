@@ -9,11 +9,12 @@
 <script>
   $(document).ready(function () {
     $(".plus.icon").click(function () {
+      $('ol').show()
       i = $(".item");
       x = i.val();
       if (x != "") {
         $("ol").append(
-          "<li>" + x + "<i class='check green square icon'></i></li>"
+          "<li>" + x + "<i class='check blue square icon'></i></li>"
         );
       } else {
         alert("Please enter a value.");
@@ -45,6 +46,22 @@
     float: right;
   }
   li {
-    max-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    background: pink;
+    border: 1px solid black;
+  }
+  li:hover{
+    background: hotpink;
+  }
+  ol{
+    padding: 10px 10px 10px 20px;
+    border: 2px solid black;
+    background: skyblue;
+    max-width: 300px;
+    display: none;
+  }
+  ol,li,input{
+    font-size: 22px;
   }
 </style>
